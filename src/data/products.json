@@ -220,6 +220,100 @@
       "proteinPerServing": "0g",
       "price": 19.99,
       "image": "https://www.guardian.in/cdn/shop/files/90200304-1..jpg?v=1738330291&width=1200"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": 22,
+      "name": "Whey Protein Isolate",
+      "brand": "MuscleTech",
+      "flavor": "Chocolate",
+      "weight": "2kg",
+      "proteinPerServing": "25g",
+      "price": 49.99,
+      "image": "https://i.pinimg.com/474x/83/08/da/8308da21ccd9acf0a83585894fe954de.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Plant-Based Protein",
+      "brand": "Vega",
+      "flavor": "Vanilla",
+      "weight": "1.8kg",
+      "proteinPerServing": "20g",
+      "price": 39.99,
+      "image": "https://i.pinimg.com/736x/5e/60/9b/5e609b76b8b9c06213b12b7aa10eb3e9.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Mass Gainer",
+      "brand": "Optimum Nutrition",
+      "flavor": "Cookies & Cream",
+      "weight": "3kg",
+      "proteinPerServing": "50g",
+      "price": 59.99,
+      "image": "https://i.pinimg.com/736x/af/43/26/af432697d0d5d2a274114d7e6c07efd3.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Casein Protein",
+      "brand": "Dymatize",
+      "flavor": "Strawberry",
+      "weight": "1.5kg",
+      "proteinPerServing": "24g",
+      "price": 44.99,
+      "image": "https://i.pinimg.com/736x/af/43/26/af432697d0d5d2a274114d7e6c07efd3.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Recovery Blend",
+      "brand": "BSN",
+      "flavor": "Banana",
+      "weight": "2.2kg",
+      "proteinPerServing": "30g",
+      "price": 54.99,
+      "image": "https://i.pinimg.com/736x/da/c4/0f/dac40f97e146c20a851d26249e34dead.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Hydro Whey",
+      "brand": "ON",
+      "flavor": "Mango",
+      "weight": "2kg",
+      "proteinPerServing": "24g",
+      "price": 52.99,
+      "image": "https://i.pinimg.com/474x/2b/a9/1e/2ba91e720cd5d9b94dfd214d2af36aa2.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Egg White Protein",
+      "brand": "Now Sports",
+      "flavor": "Natural",
+      "weight": "1kg",
+      "proteinPerServing": "25g",
+      "price": 35.50,
+      "image": "https://i.pinimg.com/474x/cf/7e/68/cf7e68bb2eb78afc1804c10e661b6f2c.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Keto Protein Blend",
+      "brand": "Perfect Keto",
+      "flavor": "Peanut Butter",
+      "weight": "1.2kg",
+      "proteinPerServing": "21g",
+      "price": 47.00,
+      "image": "https://i.pinimg.com/474x/cf/7e/68/cf7e68bb2eb78afc1804c10e661b6f2c.jpg"
     }
   ]
 }
