@@ -1,0 +1,107 @@
+{
+  "supplements": [
+    {
+      "id": 1,
+      "name": "Whey Protein Isolate",
+      "brand": "MuscleTech",
+      "flavor": "Chocolate",
+      "weight": "2kg",
+      "proteinPerServing": "25g",
+      "price": 49.99,
+      "image": "https://i.pinimg.com/474x/83/08/da/8308da21ccd9acf0a83585894fe954de.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Plant-Based Protein",
+      "brand": "Vega",
+      "flavor": "Vanilla",
+      "weight": "1.8kg",
+      "proteinPerServing": "20g",
+      "price": 39.99,
+      "image": "https://i.pinimg.com/736x/5e/60/9b/5e609b76b8b9c06213b12b7aa10eb3e9.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mass Gainer",
+      "brand": "Optimum Nutrition",
+      "flavor": "Cookies & Cream",
+      "weight": "3kg",
+      "proteinPerServing": "50g",
+      "price": 59.99,
+      "image": "https://i.pinimg.com/736x/af/43/26/af432697d0d5d2a274114d7e6c07efd3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Casein Protein",
+      "brand": "Dymatize",
+      "flavor": "Strawberry",
+      "weight": "1.5kg",
+      "proteinPerServing": "24g",
+      "price": 44.99,
+      "image": "https://i.pinimg.com/736x/af/43/26/af432697d0d5d2a274114d7e6c07efd3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Recovery Blend",
+      "brand": "BSN",
+      "flavor": "Banana",
+      "weight": "2.2kg",
+      "proteinPerServing": "30g",
+      "price": 54.99,
+      "image": "https://i.pinimg.com/736x/da/c4/0f/dac40f97e146c20a851d26249e34dead.jpg"
+    }
+  ],
+  "staticProducts": [
+    {
+      "id": 6,
+      "name": "Pre-Workout Energizer",
+      "brand": "C4 Sport",
+      "flavor": "Fruit Punch",
+      "weight": "400g",
+      "proteinPerServing": "5g",
+      "price": 34.99,
+      "image": "https://i.pinimg.com/474x/83/08/da/8308da21ccd9acf0a83585894fe954de.jpg"
+    },
+    {
+      "id": 7,
+      "name": "BCAA Complex",
+      "brand": "XTEND",
+      "flavor": "Blue Raspberry",
+      "weight": "500g",
+      "proteinPerServing": "0g",
+      "price": 29.99,
+      "image": "https://i.pinimg.com/736x/5e/60/9b/5e609b76b8b9c06213b12b7aa10eb3e9.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Creatine Monohydrate",
+      "brand": "MuscleTech",
+      "flavor": "Unflavored",
+      "weight": "300g",
+      "proteinPerServing": "0g",
+      "price": 24.99,
+      "image": "https://i.pinimg.com/736x/af/43/26/af432697d0d5d2a274114d7e6c07efd3.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Protein Bars",
+      "brand": "Quest",
+      "flavor": "Chocolate Chip",
+      "weight": "12 Bars",
+      "proteinPerServing": "20g",
+      "price": 39.99,
+      "image": "https://i.pinimg.com/736x/da/c4/0f/dac40f97e146c20a851d26249e34dead.jpg"
+    },
+    {
+      "id": 10,
+      "name": "L-Carnitine Liquid",
+      "brand": "Nutrex",
+      "flavor": "Berry Blast",
+      "weight": "473ml",
+      "proteinPerServing": "0g",
+      "price": 19.99,
+      "image": "https://i.pinimg.com/736x/17/0c/2c/170c2c8fc2f6d02a931c27c4ff566055.jpg"
+    }
+  ]
+  
+}
