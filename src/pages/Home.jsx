@@ -1,14 +1,18 @@
 import { useCart } from "../contexts/CartContext";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import productsData from "../data/products.json";
 import { useWishlist } from '../contexts/WishlistContext';
-
 
 const Home = () => {
   const { addToCart } = useCart();
   const { supplements, staticProducts } = productsData;
   const duplicatedSupplements = [...supplements, ...supplements];
   const { addToWishlist } = useWishlist();
+  const navigate = useNavigate();
+
+  const handleProductClick = (product) => {
+    navigate("/productdetails", { state: { product } });
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -25,7 +29,8 @@ const Home = () => {
           {duplicatedSupplements.map((product, index) => (
             <div
               key={`${product.id}-${index}`}
-              className="flex-shrink-0 h-[400px] w-[300px] sm:w-[350px] mx-4 relative group"
+              className="flex-shrink-0 h-[400px] w-[300px] sm:w-[350px] mx-4 relative group cursor-pointer"
+              onClick={() => handleProductClick(product)}
             >
               <div className="h-full w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
                 <img
@@ -46,8 +51,6 @@ const Home = () => {
                       {product.proteinPerServing} Protein/Serving
                     </p>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
@@ -65,7 +68,8 @@ const Home = () => {
           {staticProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              onClick={() => handleProductClick(product)}
             >
               <img
                 src={product.image}
@@ -86,15 +90,16 @@ const Home = () => {
                   </p>
                 </div>
 
-                {/* Add to Cart Button in Middle */}
-
                 <div className="mt-4 flex flex-col sm:flex-row sm:justify-between items-center gap-2">
                   <span className="text-lg font-bold text-gray-900 text-center sm:text-left">
                     ${product.price}
                   </span>
 
                   <button
-                    onClick={() => addToCart(product)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart(product);
+                    }}
                     className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm"
                   >
                     Add to Cart
@@ -102,14 +107,20 @@ const Home = () => {
 
                   <div className="flex items-center gap-4">
                     <button
-                      onClick={() =>  addToWishlist(product)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addToWishlist(product);
+                      }}
                       className="text-xl hover:scale-110 transition-transform"
                       title="Add to Wishlist"
                     >
                       ❤️
                     </button>
                     <button
-                      onClick={() => addToCart(product)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addToCart(product);
+                      }}
                       className="text-xl hover:scale-110 transition-transform"
                       title="Add to Cart"
                     >

@@ -49,6 +49,56 @@
       "proteinPerServing": "30g",
       "price": 54.99,
       "image": "https://i.pinimg.com/736x/da/c4/0f/dac40f97e146c20a851d26249e34dead.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Hydro Whey",
+      "brand": "ON",
+      "flavor": "Mango",
+      "weight": "2kg",
+      "proteinPerServing": "24g",
+      "price": 52.99,
+      "image": "https://i.pinimg.com/474x/2b/a9/1e/2ba91e720cd5d9b94dfd214d2af36aa2.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Egg White Protein",
+      "brand": "Now Sports",
+      "flavor": "Natural",
+      "weight": "1kg",
+      "proteinPerServing": "25g",
+      "price": 35.50,
+      "image": "https://i.pinimg.com/474x/cf/7e/68/cf7e68bb2eb78afc1804c10e661b6f2c.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Keto Protein Blend",
+      "brand": "Perfect Keto",
+      "flavor": "Peanut Butter",
+      "weight": "1.2kg",
+      "proteinPerServing": "21g",
+      "price": 47.00,
+      "image": "https://i.pinimg.com/474x/cf/7e/68/cf7e68bb2eb78afc1804c10e661b6f2c.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Beef Protein Isolate",
+      "brand": "MuscleMeds",
+      "flavor": "Chocolate",
+      "weight": "2.5kg",
+      "proteinPerServing": "30g",
+      "price": 63.00,
+      "image": "https://i.pinimg.com/474x/3d/9d/6e/3d9d6edc5b568938a1959073074ce7bd.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Natural Whey",
+      "brand": "Orgain",
+      "flavor": "Vanilla Bean",
+      "weight": "1.5kg",
+      "proteinPerServing": "21g",
+      "price": 45.25,
+      "image": "https://i.pinimg.com/474x/d9/10/d3/d910d330258be3f73cdccf1613ca6dec.jpg"
     }
   ],
   "staticProducts": [
@@ -94,14 +144,82 @@
     },
     {
       "id": 10,
+      "name": "GNC",
+      "brand": "Nutrex",
+      "flavor": "Berry Blast",
+      "weight": "473ml",
+      "proteinPerServing": "0g",
+      "price": 19.99,
+      "image": "https://i.pinimg.com/474x/76/e7/d5/76e7d55c846d2a943865e1317b478a1f.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Glutamine Powder",
+      "brand": "MuscleBlaze",
+      "flavor": "Orange",
+      "weight": "250g",
+      "proteinPerServing": "0g",
+      "price": 21.00,
+      "image": "https://i.pinimg.com/474x/76/e7/d5/76e7d55c846d2a943865e1317b478a1f.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Electrolyte Drink",
+      "brand": "Fast&Up",
+      "flavor": "Lime",
+      "weight": "20 Tablets",
+      "proteinPerServing": "0g",
+      "price": 14.50,
+      "image": "https://i.pinimg.com/474x/3d/9d/6e/3d9d6edc5b568938a1959073074ce7bd.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Thermogenic Burner",
+      "brand": "Cellucor",
+      "flavor": "Capsules",
+      "weight": "90 caps",
+      "proteinPerServing": "0g",
+      "price": 27.99,
+      "image": "https://i.pinimg.com/474x/cf/7e/68/cf7e68bb2eb78afc1804c10e661b6f2c.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Zinc Magnesium Capsules",
+      "brand": "Himalaya",
+      "flavor": "Capsules",
+      "weight": "60 caps",
+      "proteinPerServing": "0g",
+      "price": 12.99,
+      "image": "https://i.pinimg.com/736x/e0/f1/6c/e0f16cd00fbc748dfff3a930ca552b8c.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Omega-3 Fish Oil",
+      "brand": "GNC",
+      "flavor": "Softgel",
+      "weight": "1000mg x 60",
+      "proteinPerServing": "0g",
+      "price": 18.49,
+      "image": "https://www.guardian.in/cdn/shop/files/PowerProteinDchoco.jpg?v=1708937983&width=305"
+    },
+    {
+      "id": 21,
       "name": "L-Carnitine Liquid",
       "brand": "Nutrex",
       "flavor": "Berry Blast",
       "weight": "473ml",
       "proteinPerServing": "0g",
       "price": 19.99,
-      "image": "https://i.pinimg.com/736x/17/0c/2c/170c2c8fc2f6d02a931c27c4ff566055.jpg"
+      "image": "https://www.guardian.in/cdn/shop/files/90200304-1..jpg?v=1738330291&width=1200"
+    },{
+      "id": 21,
+      "name": "Creatine Monohydrate",
+      "brand": "Nutrex",
+      "flavor": "Berry Blast",
+      "weight": "473ml",
+      "proteinPerServing": "0g",
+      "price": 19.99,
+      "image": "https://www.guardian.in/cdn/shop/files/90200304-1..jpg?v=1738330291&width=1200"
     }
   ]
-  
 }
