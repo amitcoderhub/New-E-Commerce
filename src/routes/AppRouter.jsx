@@ -11,6 +11,8 @@ import Contact from '../pages/Contact';
 import Collections from '../pages/Collections';
 import Offers from '../pages/Offers';
 import Wishlist from '../pages/Wishlist';
+import ProductDetail from '../pages/ProductDetails'; // Adjust path as needed
+
 
 
 const AppRouter = () => {
@@ -20,7 +22,8 @@ const AppRouter = () => {
       <main className="min-h-screen">
         <Routes>
           
-        
+        <Route path="/product/:id" element={<ProductDetails />} />
+
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/wishlist" element={<Wishlist />} />
