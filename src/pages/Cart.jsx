@@ -1,9 +1,10 @@
-import React from 'react';
-import { useCart } from '../contexts/CartContext';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useCart } from "../contexts/CartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
+  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
+    useCart();
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -70,9 +71,12 @@ const Cart = () => {
           <div className="mt-6 border-t pt-4 text-right">
             <p className="text-xl font-bold">
               Total: ₹
-              {cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}
+              {cartItems.reduce(
+                (total, item) => total + item.price * item.quantity,
+                0
+              )}
             </p>
-            <Link to="/checkout">
+            <Link to="/payment">
               <button className="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                 Proceed to Checkout
               </button>

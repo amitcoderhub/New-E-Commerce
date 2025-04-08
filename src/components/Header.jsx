@@ -39,7 +39,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <Link to="/" className="text-2xl font-bold">
-            E-Commerce
+          Amit's <span className="text-blue-900"> Muscle Mart </span>
           </Link>
           <button
             className="md:hidden block"

@@ -11,7 +11,8 @@ import Contact from '../pages/Contact';
 import Collections from '../pages/Collections';
 import Offers from '../pages/Offers';
 import Wishlist from '../pages/Wishlist';
-import ProductDetail from '../pages/ProductDetails'; // Adjust path as needed
+
+import Payment from '../pages/Payment';
 
 
 
@@ -34,6 +35,7 @@ const AppRouter = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </main>
       <Footer />
