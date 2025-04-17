@@ -1,21 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
 import productsData from "../data/products.json";
 import { useWishlist } from '../contexts/WishlistContext';
 
-
 const Products = () => {
   const { addToCart } = useCart();
+  const { addToWishlist } = useWishlist();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const { addToWishlist } = useWishlist();
+  const [allProducts, setAllProducts] = useState([]);
 
+  useEffect(() => {
+    const retailerProducts = JSON.parse(localStorage.getItem("customProducts")) || [];
 
-  const allProducts = [
-    ...productsData.supplements,
-    ...productsData.staticProducts,
-  ];
+    const combinedProducts = [
+      ...productsData.supplements,
+      ...productsData.staticProducts,
+      ...retailerProducts,
+    ];
+
+    setAllProducts(combinedProducts);
+  }, []);
 
   const categories = [
     "all",
@@ -27,9 +33,9 @@ const Products = () => {
   ];
 
   const filteredProducts = allProducts.filter((product) => {
-    const name = product.name.toLowerCase();
-    const brand = product.brand.toLowerCase();
-    const flavor = product.flavor.toLowerCase();
+    const name = product.name?.toLowerCase() || "";
+    const brand = product.brand?.toLowerCase() || "";
+    const flavor = product.flavor?.toLowerCase() || "";
     const query = searchQuery.toLowerCase();
 
     const matchesSearch =
@@ -53,7 +59,7 @@ const Products = () => {
         Our Products
       </h2>
 
-      {/* Search & Category Filter */}
+      {/* Search & Filter */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
         <input
           type="text"
@@ -62,7 +68,6 @@ const Products = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-
         <div className="flex gap-2 flex-wrap justify-center md:justify-start">
           {categories.map((category) => (
             <button
@@ -85,7 +90,7 @@ const Products = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {filteredProducts.map((product) => (
             <div
-              key={product.id}
+              key={product.id || product.name}
               className="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col"
             >
               <img
@@ -103,7 +108,7 @@ const Products = () => {
                     {product.flavor} • {product.weight}
                   </p>
                   <p className="text-xs text-blue-600 font-semibold">
-                    {product.proteinPerServing} Protein/Serving
+                    {product.proteinPerServing || "N/A"} Protein/Serving
                   </p>
                 </div>
 
@@ -112,7 +117,6 @@ const Products = () => {
                     ${product.price}
                   </span>
                   <div className="flex items-center gap-2">
-                    {/* Wishlist Icon */}
                     <button
                       onClick={() => addToWishlist(product)}
                       className="text-xl hover:scale-110 transition-transform"
@@ -120,8 +124,6 @@ const Products = () => {
                     >
                       ❤️
                     </button>
-
-                    {/* Add to Cart Icon */}
                     <button
                       onClick={() => addToCart(product)}
                       className="text-xl hover:scale-110 transition-transform"
@@ -132,7 +134,6 @@ const Products = () => {
                   </div>
                 </div>
 
-                {/* Add to Cart Button */}
                 <button
                   onClick={() => addToCart(product)}
                   className="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-sm transition"
@@ -140,9 +141,8 @@ const Products = () => {
                   Add to Cart
                 </button>
 
-                {/* Product Detail Button */}
                 <Link
-                  to={`/products/${product.id}`}
+                  to={`/products/${product.id || product.name}`}
                   className="mt-2 w-full text-center text-sm border border-blue-600 text-blue-600 rounded py-1 hover:bg-blue-50 transition"
                 >
                   View Details

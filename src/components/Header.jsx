@@ -10,6 +10,7 @@ const Header = () => {
   const { wishlistItems } = useWishlist();
   const [searchQuery, setSearchQuery] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const navigation = [
@@ -39,17 +40,13 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <Link to="/" className="text-2xl font-bold">
-          Amit's <span className="text-blue-900"> Muscle Mart </span>
+            Amit's <span className="text-blue-900"> Muscle Mart </span>
           </Link>
           <button
             className="md:hidden block"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {menuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -77,8 +74,8 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Search, Wishlist, Cart */}
-        <div className="flex  md:flex-row items-stretch md:items-center gap-3 mt-3 md:mt-0 w-full md:w-auto relative">
+        {/* Search, Wishlist, Cart, User */}
+        <div className="flex md:flex-row items-stretch md:items-center gap-3 mt-3 md:mt-0 w-full md:w-auto relative">
           {/* Search */}
           <div className="relative w-full md:w-64">
             <input
@@ -164,6 +161,53 @@ const Header = () => {
               </span>
             )}
           </Link>
+
+          {/* User Icon */}
+          <div className="relative">
+            <button
+              onClick={() => setUserMenuOpen((prev) => !prev)}
+              className="hover:text-blue-200 flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 14c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm0 2c-4.418 0-8 2.014-8 4.5V21h16v-.5c0-2.486-3.582-4.5-8-4.5z"
+                />
+              </svg>
+            </button>
+
+            {/* User Dropdown */}
+            {userMenuOpen && (
+              <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded-md shadow-lg z-50 py-2">
+                <button
+                  className="block w-full text-left px-4 py-2 hover:bg-blue-100"
+                  onClick={() => {
+                    navigate("/retailer-login");
+                    setUserMenuOpen(false);
+                  }}
+                >
+                  Retailer Login/Register
+                </button>
+                <button
+                  className="block w-full text-left px-4 py-2 hover:bg-blue-100"
+                  onClick={() => {
+                    navigate("/customer-login");
+                    setUserMenuOpen(false);
+                  }}
+                >
+                  Customer Login/Register
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </nav>
     </header>
